@@ -7,11 +7,13 @@
     loc =0;
   }
   const words = [
-    'abdomen',
-    'cellulose',
-    'catalyst',
-    'endoplasm',
-    'meiosis'
+    'bicorn',
+    'gargoyle',
+    'sphinx',
+    'basilisk',
+    'echidna',
+    'carbunclo',
+    'ouroboros'
   ]
 
   let word;
