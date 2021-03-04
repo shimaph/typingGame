@@ -20,6 +20,7 @@
   let loc = 0;
   let startTime;
   let isPlaying = false;
+
   function click() {
     let sound = new Audio('click.mp3');
     let sound2 = new Audio('click2.mp3');
@@ -36,6 +37,8 @@
   }
 
   const target = document.getElementById('target');
+  const type = document.getElementById('type')
+  const typed = document.getElementById('typed')
 
 
 
@@ -45,6 +48,8 @@
     }
     if (event.keyCode === 32){
     isPlaying = true;
+    type.textContent = " ";
+    typed.textContent = " ";
     startTime = Date.now();
     setWord();
   }

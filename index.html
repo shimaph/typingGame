@@ -13,11 +13,36 @@
   <body>
     <div class="text-content">
       <span class = "type-text" id="target">Press SPACE to start!</span>
+      <br>
+    <div id="typedEx">
+      <p id="type"> type <span id="typed"></span></p>
     </div>
+    </div>
+
 
       <p id="result"></p>
 
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="typed.js"></script>
+
+    <script>
+  var typed = new Typed("#typed", {
+    strings: [
+      'bicorn',
+      'gargoyle',
+      'sphinx',
+      'basilisk',
+      'echidna',
+      'carbunclo',
+      'ouroboros'
+    ],
+    typeSpeed: 30,
+    loop: true
+  });
+
+  </script>
+
+
 
 
   </body>
