@@ -14,14 +14,26 @@
     <div class="text-content">
       <span class = "type-text" id="target">Press SPACE to start!</span>
       <br>
+
+
+<!-- 敵キャラはこの中に -->
+
+    <div id="enemy">
+      <span id="enemyName"></span>
+      <img id="enemyImg" width="50px">
+    </div>
+
+
     <div id="typedEx">
       <p id="type"> type <span id="typed"></span></p>
     </div>
     </div>
 
 
+
       <p id="result"></p>
 
+    <script type="text/javascript" src="js/enemy.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="typed.js"></script>
 
@@ -34,7 +46,11 @@
       'basilisk',
       'echidna',
       'carbunclo',
-      'ouroboros'
+      'ouroboros',
+      'lizardman',
+      'lilith',
+      'goblin',
+      'slime'
     ],
     typeSpeed: 30,
     loop: true

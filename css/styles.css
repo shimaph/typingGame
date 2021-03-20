@@ -18,3 +18,21 @@ body {
   font-size: 48px;
   letter-spacing: .1em;
 }
+
+#enemy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  justify-content: center;
+}
+
+#enemyName {
+
+  width:  inherit;
+  margin-bottom: 1px;
+}
+
+.lizardman {
+  width: 70px;
+}
