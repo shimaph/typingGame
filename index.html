@@ -11,12 +11,25 @@
 
   </head>
   <body>
+    <div class="ancientTyper">
+      <div id="titleScreen">
+        <span class ="title">Ancient Typer</span>
+        <p class="space">PRESS "SPACE" KEY</p>
+        <p class="copyright">©️しま🧩</p>
+      </div>
+
+
+
     <div class="text-content">
-      <span class = "type-text" id="target">Press SPACE to start!</span>
-      <br>
+
+
+
 
 
 <!-- 敵キャラはこの中に -->
+
+    <span class = "type-text" id="target"></span>ß
+    <br>
 
     <div id="enemy">
       <span id="enemyName"></span>
@@ -24,39 +37,18 @@
     </div>
 
 
-    <div id="typedEx">
-      <p id="type"> type <span id="typed"></span></p>
-    </div>
     </div>
 
 
 
       <p id="result"></p>
-
+        </div>
     <script type="text/javascript" src="js/enemy.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="typed.js"></script>
+    <script type="text/javascript" src="js/openingScreen.js"></script>
 
-    <script>
-  var typed = new Typed("#typed", {
-    strings: [
-      'bicorn',
-      'gargoyle',
-      'sphinx',
-      'basilisk',
-      'echidna',
-      'carbunclo',
-      'ouroboros',
-      'lizardman',
-      'lilith',
-      'goblin',
-      'slime'
-    ],
-    typeSpeed: 30,
-    loop: true
-  });
 
-  </script>
+
 
 
 

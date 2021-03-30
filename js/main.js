@@ -1,16 +1,4 @@
-'use strict'
-
-{
-
-
-
-
-
-
-
-
-
-
+  console.log(enemies);
 
   function setWord() {
     word = words.splice(Math.floor(Math.random() * words.length), 1)[0];
@@ -19,38 +7,28 @@
 
     loc =0;
 
-    switch (word) {
-      case "slime":
-        enemyFunc(slime);
-        console.log("slimy");
-        break;
-      case "goblin":
-        enemyFunc(goblin);
-        console.log("gobling");
-        break;
-      case "lilith":
-        enemyFunc(lilith);
-        break;
-      case "lizardman":
-        const img = document.getElementById('enemyImg');
-        enemyFunc(lizardman);
-        break;
-      default:
+    if (word.length <= 4) {
+      enemyFunc(enemies[0]);
+    } else if (word.length <= 7) {
+      enemyFunc(enemies[1]);
+    } else if (word.length <= 9) {
+      enemyFunc(enemies[2]);
+    } else {
+      enemyFunc(enemies[3]);
     }
 
       enemyName.textContent = word;
-
-
-
   }
+
+
   const words = [
-    // 'bicorn',
-    // 'gargoyle',
-    // 'sphinx',
-    // 'basilisk',
-    // 'echidna',
-    // 'carbunclo',
-    // 'ouroboros',
+    'bicorn',
+    'gargoyle',
+    'sphinx',
+    'basilisk',
+    'echidna',
+    'carbunclo',
+    'ouroboros',
     'lizardman',
     'lilith',
     'goblin',
@@ -81,7 +59,7 @@
     }
   }
 
-
+  const titleScreen = document.getElementById('titleScreen');
   const target = document.getElementById('target');
   const enemyName = document.getElementById('enemyName');
   const type = document.getElementById('type')
@@ -95,8 +73,7 @@
     }
     if (event.keyCode === 32){
     isPlaying = true;
-    type.textContent = " ";
-    typed.textContent = " ";
+    titleScreen.style.display = "none";
     startTime = Date.now();
     setWord();
     move(isPlaying, isPlaying);
@@ -129,22 +106,18 @@
         }
 
 
-        switch (word) {
-          case "slime":
-            slime.alive = false;
-            break;
-          case "goblin":
-            goblin.alive = false;
-            break;
-          case "lilith":
-            lilith.alive = false;
-            break;
-          case "lizardman":
-            lizardman.alive = false;
-            const img = document.getElementById('enemyImg');
-            break;
-          default:
+        if (word.length <= 4) {
+          enemies[0].alive = false;
+        } else if (word.length <= 7) {
+          enemies[1].alive = false;
+        } else if (word.length <= 9) {
+          enemies[2].alive = false;
+        } else {
+          enemies[3].alive = false;
         }
+
+
+
 
         setTimeout(setWord, 200);
 
@@ -153,8 +126,3 @@
       }
 
   });
-
-
-
-
-}

@@ -1,52 +1,23 @@
-const slime = {
-  name: "slime",
-
-  img1: 'img/slime/row-3-col-1.png',
-  img2: 'img/slime/row-3-col-2.png',
-  img3: 'img/slime/row-3-col-3.png',
-  img4: 'img/slime/row-3-col-2.png',
-
-  alive: true,
+class Enemy {
+  constructor(name) {
+    this.name = name;
+    this.alive = true;
+    this.img1 = `img/${name}/row-3-col-1.png`;
+    this.img2 = `img/${name}/row-3-col-2.png`;
+    this.img3 = `img/${name}/row-3-col-3.png`;
+    this.img4 = `img/${name}/row-3-col-2.png`;
+  }
 }
 
-
- const goblin = {
-   name: "goblin",
-
-   img1: 'img/goblin/row-3-col-1.png',
-   img2: 'img/goblin/row-3-col-2.png',
-   img3: 'img/goblin/row-3-col-3.png',
-   img4: 'img/goblin/row-3-col-2.png',
-
-   alive: true,
- }
-
-
- const lilith = {
-   name: "lilith",
-
-   img1: 'img/lilith/row-3-col-1.png',
-   img2: 'img/lilith/row-3-col-2.png',
-   img3: 'img/lilith/row-3-col-3.png',
-   img4: 'img/lilith/row-3-col-2.png',
-
-   alive: true,
- }
-
- const lizardman = {
-   name: "lizardman",
-
-   img1: 'img/lizardman/row-3-col-1.png',
-   img2: 'img/lizardman/row-3-col-2.png',
-   img3: 'img/lizardman/row-3-col-3.png',
-   img4: 'img/lizardman/row-3-col-2.png',
-
-   alive: true,
- }
+const enemies = [
+  new Enemy('slime'),
+  new Enemy('goblin'),
+  new Enemy('lilith'),
+  new Enemy('lizardman')
+]
 
 const enemy = document.getElementById("enemy");
 let x = 0;
-
 
 
 function move(isPlaying, reset) {
@@ -55,21 +26,13 @@ function move(isPlaying, reset) {
   }
   let x = -80;
 
-
-
   function foward(){
-    enemy.style.marginLeft = x + "px";
+    enemy.style.marginLeft = `${x}px`;
     x +=10;
     console.log(x);
-  }
-
+    }
   intervalIdfoward = setInterval(foward, 200);
-
 }
-
-
-
-
 
 
 
@@ -79,7 +42,7 @@ function move(isPlaying, reset) {
 
 function enemyFunc(enemyName) {
   enemy.style.display = "block";
-  let exist = true;
+  enemyName.alive = true;
 
   enemyImgInterval(enemyName);
 }
