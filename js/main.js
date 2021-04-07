@@ -74,6 +74,8 @@
     if (event.keyCode === 32){
     isPlaying = true;
     titleScreen.style.display = "none";
+    ready();
+
     startTime = Date.now();
     setWord();
     move(isPlaying, isPlaying);
