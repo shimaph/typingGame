@@ -22,17 +22,17 @@
 
 
   const words = [
-    'bicorn',
-    'gargoyle',
-    'sphinx',
-    'basilisk',
-    'echidna',
-    'carbunclo',
-    'ouroboros',
-    'lizardman',
-    'lilith',
-    'goblin',
-    'slime'
+    'legal',
+    'uneconomical',
+    'establish',
+    'context',
+    'communication',
+    'express',
+    'habit',
+    'sleep',
+    'text',
+    'playmaking',
+    'shadow'
   ]
 
   let word;
@@ -75,10 +75,11 @@
     isPlaying = true;
     titleScreen.style.display = "none";
     ready();
+    setTimeout(start, 1000);
 
     startTime = Date.now();
-    setWord();
-    move(isPlaying, isPlaying);
+    setTimeout(setWord, 1000);
+    setTimeout(move(isPlaying, isPlaying), 1000);
   }
   })
 
@@ -103,6 +104,7 @@
 
           const elapsedTime = ((Date.now() - startTime) / 1000).toFixed(2);
           const result = document.getElementById('result');
+          result.style.marginTop = ('300px');
           result.textContent = 'Finished!\t' + elapsedTime + '\tseconds!';
           return;
         }

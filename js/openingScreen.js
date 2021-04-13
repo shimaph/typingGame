@@ -26,3 +26,8 @@ function ready() {
   rs.appendChild(ready);
   rs.appendChild(ground);
 }
+
+function start() {
+  const ready = document.querySelector('#readyScreen > p')
+  ready.style.display = "none";
+}

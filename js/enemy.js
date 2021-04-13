@@ -24,10 +24,11 @@ function move(isPlaying, reset) {
   if(isPlaying !== true) {
     return;
   }
-  let x = -80;
+  let x = 0;
 
   function foward(){
     enemy.style.marginLeft = `${x}px`;
+    enemy.style.marginTop = `250px`;
     x +=10;
     console.log(x);
     }
